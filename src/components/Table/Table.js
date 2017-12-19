@@ -23,7 +23,8 @@ const Table = ({ config, data }) => (
 
 const mapStateToProps = state => {
     return {
-        data: state.table
+        data: state.table,
+        filter: state.filter
     }
 }
   

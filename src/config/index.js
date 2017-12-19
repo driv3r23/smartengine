@@ -1,4 +1,5 @@
 import Input from '../components/Input/Input'
+import { filterByArticle } from '../components/Input/actions/'
 
 export default {
     content: {
@@ -9,12 +10,17 @@ export default {
         {
             label: 'Name der kategorie',
             name: 'kategorie',
-            component: Input
+            component: {
+                type: Input,
+                onChange: filterByArticle
+            }
         },
         {
             label: 'Name des artikels',
             name: 'artikel',
-            component: Input
+            component: {
+                type: Input
+            }
         }
     ],
     table: [
