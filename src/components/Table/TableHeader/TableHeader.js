@@ -1,6 +1,5 @@
 import React from 'react'
-
-//import styles from './styles.less'
+import PropTypes from 'prop-types'
 
 const TableHeader = ({ config }) => (
     <tr>
@@ -11,5 +10,9 @@ const TableHeader = ({ config }) => (
         }
     </tr>
 )
+
+TableHeader.propTypes = {
+    config: PropTypes.array
+}
 
 export default TableHeader

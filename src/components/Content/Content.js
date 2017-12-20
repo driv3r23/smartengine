@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import styles from './styles.less'
 
@@ -9,5 +10,11 @@ const Content = ({ title, summary, children }) => (
         { children }
     </section>
 )
+
+Content.propTypes = {
+    title: PropTypes.string,
+    summary: PropTypes.string,
+    children: PropTypes.node
+}
 
 export default Content

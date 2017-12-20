@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import styles from './styles.less'
 
@@ -12,5 +13,9 @@ const Filter = ({ config }) => (
         }
     </section>
 )
+
+Filter.propTypes = {
+    config: PropTypes.array
+}
 
 export default Filter

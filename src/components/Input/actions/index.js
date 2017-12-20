@@ -1,1 +1,1 @@
-export { default as filterByArticle } from './filterByArticle/filterByArticle'
+export { default as filterByValue } from './filterByValue/filterByValue'

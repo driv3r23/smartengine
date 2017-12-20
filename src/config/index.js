@@ -1,5 +1,10 @@
+/* Abstract configuration of the page */
+
 import Input from '../components/Input/Input'
-import { filterByArticle } from '../components/Input/actions/'
+import Button from '../components/Button/Button'
+import Image from '../components/Image/Image'
+
+import { filterByValue } from '../components/Input/actions/'
 
 export default {
     content: {
@@ -8,36 +13,53 @@ export default {
     },
     filter: [
         {
-            label: 'Name der kategorie',
-            name: 'kategorie',
-            component: {
-                type: Input,
-                onChange: filterByArticle
-            }
-        },
-        {
             label: 'Name des artikels',
             name: 'artikel',
             component: {
-                type: Input
+                type: Input,
+                onChange: {
+                    action: filterByValue,
+                    name: 'article'
+                }
             }
-        }
+        },
+        {
+            label: 'Name der kategorie',
+            name: 'kategorie',
+            component: {
+                type: Input                
+            }
+        }        
     ],
     table: [
         {
-            name: 'image', label: ''
+            name: 'image',
+            label: '',
+            component: {
+                type: Image
+            }
         },
         {
-            name: 'article', label: 'Artikel'
+            name: 'article',
+            label: 'Artikel'
         },
         {
-            name: 'id', label: 'Artikel ID'
+            name: 'id',
+            label: 'Artikel ID'
         },
         {
-            name: 'count', label: 'Anzahl Abbruche'
+            name: 'count',
+            label: 'Anzahl Abbruche'
         },
         {
-            name: 'control', label: ''
+            name: 'control',
+            label: '',
+            component: {
+                type: Button,
+                data: {
+                    label: 'Auswahlen'
+                }
+            }
         }
     ]
 }
