@@ -8,6 +8,7 @@ const Content = ({ title, summary, children }) => (
         <h1 className={ styles.title }>{ title }</h1>
         <h2 className={ styles.summary }>{ summary }</h2>
         { children }
+        <a className={ styles.close } href='#'/>
     </section>
 )
 

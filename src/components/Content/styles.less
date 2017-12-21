@@ -3,6 +3,8 @@
     margin: 20px auto;
     padding: 25px 20px;
 
+    position: relative;
+
     background-color: #ffffff
 }
 
@@ -18,4 +20,32 @@
 
     font-size: 16px;
     line-height: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 45px;
+    right: 15px;
+
+    &:before,
+    &:after {
+        height: 3px;
+        width: 35px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        background-color: #004f66;
+
+        content: '';
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
 }

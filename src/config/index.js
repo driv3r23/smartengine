@@ -11,15 +11,18 @@ export default {
         title: 'Kaufabbruch',
         summary: 'Verbessern Sie Ihre Verkaufsrate und erinnern Sie Kunden nach einem Kaufabbruch an die Produkte im Einkaufswagen',
     },
-    filter: [
+    step: {
+        label: 'Schritt 2 von 3: Artikel wahlen'
+    },
+    filter: [ // Filter configuration
         {
             label: 'Name des artikels',
             name: 'artikel',
             component: {
-                type: Input,
-                onChange: {
-                    action: filterByValue,
-                    name: 'article'
+                type: Input, // Choose component to render (e.g. Select, Range)
+                onChange: { // Component event handler
+                    action: filterByValue, // Action to be dispatched
+                    name: 'article' // Filtered value
                 }
             }
         },
@@ -31,7 +34,7 @@ export default {
             }
         }        
     ],
-    table: [
+    table: [ // Table configuration, here you can order the columns, set labels, choose component to render
         {
             name: 'image',
             label: '',
